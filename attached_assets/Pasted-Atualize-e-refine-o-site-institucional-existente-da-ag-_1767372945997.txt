@@ -1,0 +1,71 @@
+Atualize e refine o site institucional existente da agência “Site Já”, mantendo o layout, identidade visual e estrutura atual, porém aplicando melhorias de clareza, conversão, UX e consistência comercial.
+
+OBJETIVO:
+Tornar o site mais profissional, enxuto e focado em conversão, alinhado à proposta de entrega de sites em até 72 horas.
+
+========================
+AJUSTES OBRIGATÓRIOS
+========================
+
+1. HERO / HOME
+- Remover completamente a headline “Role para ver”
+- Caso exista algum indicativo de rolagem, deixar extremamente discreto ou remover
+- Manter o foco total na headline principal, subtítulo e CTAs
+
+2. PLANOS E PREÇOS (REGRAS IMPORTANTES)
+Em NENHUM plano deve ser citado:
+- Hospedagem inclusa
+- Domínio
+- Painel administrativo
+- Google Analytics
+
+A proposta deve deixar implícito que:
+- Hospedagem e domínio são responsabilidade do cliente
+- A entrega em 72 horas é focada em um site enxuto, direto e profissional
+
+3. LINKS DE PAGAMENTO (STRIPE)
+Atualizar os botões de CTA de cada plano para redirecionar diretamente para os links abaixo:
+
+Plano Landing Page – R$ 599  
+Link: https://buy.stripe.com/dRmeVd01mfLT9Eg5Oy1B600
+
+Plano Site Essencial – R$ 799  
+Link: https://buy.stripe.com/eVqbJ101m0QZ2bOfp81B601
+
+Plano Site Profissional – R$ 999  
+Link: https://buy.stripe.com/14A6oH01mbvDdUw6SC1B602
+
+- Os botões devem ser claros, chamativos e indicar ação imediata
+- Exemplo de texto do botão: “Contratar agora” ou “Pagar e iniciar projeto”
+
+4. REMOÇÕES DE TEXTO
+- Remover completamente a headline:
+  “Precisa de algo mais específico? E-commerce ou Sistema?”
+- Não mencionar serviços fora do escopo de sites e landing pages
+
+5. RODAPÉ (FOCO EM CONVERSÃO)
+- Tornar o rodapé mais chamativo visualmente
+- Usar contraste maior, ícones ou destaques sutis
+- Manter conteúdo centralizado
+- Inserir CTA final reforçando:
+  “Sites profissionais prontos em até 72 horas”
+
+6. BOTÃO FLUTUANTE DO WHATSAPP
+- Incluir botão flutuante de WhatsApp visível em todas as páginas
+- Posição: canto inferior direito
+- Botão com destaque visual, ícone claro e animação sutil
+- CTA direto para contato comercial
+
+========================
+DIRETRIZES GERAIS
+========================
+- Manter design moderno, dark e profissional
+- Priorizar simplicidade e clareza
+- Evitar textos longos
+- Melhorar espaçamentos e leitura
+- Garantir 100% de responsividade (desktop e mobile)
+- Não criar novas seções desnecessárias
+- Ajustar apenas o que foi solicitado
+
+RESULTADO ESPERADO:
+Um site mais limpo, direto, profissional e orientado à conversão, pronto para produção e vendas imediatas.
