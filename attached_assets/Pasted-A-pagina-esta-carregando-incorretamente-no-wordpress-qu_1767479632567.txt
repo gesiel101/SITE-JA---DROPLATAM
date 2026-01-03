@@ -1,0 +1,240 @@
+A pagina esta carregando incorretamente no wordpress. quero que a estrutura da pagina tenha a seguinte estrutura:  
+
+ESTRUTURA DE PASTAS
+site-ja/
+├── style.css
+├── functions.php
+├── index.php
+├── front-page.php
+├── header.php
+├── footer.php
+├── screenshot.png   (opcional, 1200x900)
+└── assets/
+    ├── css/
+    │   └── style.css
+    ├── js/
+    │   └── main.js
+    └── img/
+        └── hero.jpg
+style.css
+/*
+Theme Name: Site Já
+Theme URI: https://siteja.website
+Author: Site Já
+Author URI: https://siteja.website
+Description: Tema oficial da agência Site Já. Sites profissionais prontos em até 72 horas.
+Version: 1.0
+*/
+
+functions.php
+<?php
+
+function siteja_assets() {
+  wp_enqueue_style(
+    'siteja-style',
+    get_template_directory_uri() . '/assets/css/style.css',
+    [],
+    '1.0'
+  );
+
+  wp_enqueue_script(
+    'siteja-js',
+    get_template_directory_uri() . '/assets/js/main.js',
+    [],
+    '1.0',
+    true
+  );
+}
+add_action('wp_enqueue_scripts', 'siteja_assets');
+
+add_theme_support('title-tag');
+add_theme_support('post-thumbnails');
+
+header.php
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="logo">Site Já</h1>
+    <nav class="menu">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+footer.php
+<footer class="site-footer" id="contato">
+  <div class="container">
+    <p>© <?php echo date('Y'); ?> Site Já. Todos os direitos reservados.</p>
+
+    <div class="social">
+      <a href="https://www.instagram.com/siteja.website" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61585658536439" target="_blank">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/55SEUNUMERO" target="_blank">
+  WhatsApp
+</a>
+
+<?php wp_footer(); ?>
+</body>
+</html>
+
+front-page.php (HOME)
+<?php get_header(); ?>
+
+<section class="hero" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/hero.jpg')">
+  <div class="overlay">
+    <h2>Seu site profissional em até 72 horas</h2>
+    <p>Sites rápidos, modernos e prontos para vender.</p>
+    <a class="btn" href="#planos">Ver Planos</a>
+  </div>
+</section>
+
+<section id="como-funciona" class="section">
+  <h3>Como funciona</h3>
+  <div class="grid">
+    <div>Escolha o plano</div>
+    <div>Envie as informações</div>
+    <div>Site pronto em 72h</div>
+  </div>
+</section>
+
+<section id="planos" class="section dark">
+  <h3>Nossos Planos</h3>
+
+  <div class="cards">
+    <div class="card">
+      <h4>Landing Page</h4>
+      <p class="price">R$ 599</p>
+      <a href="https://buy.stripe.com/dRmeVd01mfLT9Eg5Oy1B600" class="btn">Contratar</a>
+    </div>
+
+    <div class="card destaque">
+      <h4>Site Essencial</h4>
+      <p class="price">R$ 799</p>
+      <a href="https://buy.stripe.com/eVqbJ101m0QZ2bOfp81B601" class="btn">Contratar</a>
+    </div>
+
+    <div class="card">
+      <h4>Site Profissional</h4>
+      <p class="price">R$ 999</p>
+      <a href="https://buy.stripe.com/14A6oH01mbvDdUw6SC1B602" class="btn">Contratar</a>
+    </div>
+  </div>
+</section>
+
+<?php get_footer(); ?>
+
+index.php (fallback)
+<?php get_header(); ?>
+
+<section class="section">
+  <h2>Conteúdo</h2>
+  <p>Esta é uma página padrão.</p>
+</section>
+
+<?php get_footer(); ?>
+
+CSS PRINCIPAL
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.site-header, .site-footer {
+  background: #000;
+}
+
+.menu a {
+  margin-left: 15px;
+  color: #00ff66;
+  text-decoration: none;
+}
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0,0,0,0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  background: #00ff66;
+  color: #000;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dark {
+  background: #111;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  width: 280px;
+}
+
+.destaque {
+  border: 2px solid #00ff66;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00ff66;
+  color: #000;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+JS (opcional)
+console.log("Site Já ativo");
