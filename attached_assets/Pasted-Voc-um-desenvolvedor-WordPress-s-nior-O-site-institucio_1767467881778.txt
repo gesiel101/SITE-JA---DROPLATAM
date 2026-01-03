@@ -1,0 +1,119 @@
+Você é um desenvolvedor WordPress sênior.
+
+O site institucional da agência “Site Já” já está pronto e funcionando no Replit com HTML, CSS e JavaScript puros.
+Seu objetivo é converter esse site em um TEMA WORDPRESS COMPLETO, pronto para upload e ativação no WordPress, mantendo 100% do visual, layout, animações, responsividade e comportamento atual.
+
+============================
+OBJETIVO FINAL
+============================
+Gerar todos os arquivos necessários de um tema WordPress funcional, para que ao subir o tema no WordPress o site carregue exatamente igual ao que está no servidor Replit.
+
+============================
+REQUISITOS TÉCNICOS
+============================
+- Tema WordPress clássico (não usar Elementor, Gutenberg avançado ou page builders)
+- Código limpo, organizado e comentado
+- Total compatibilidade com WordPress
+- Manter HTML, CSS e JS existentes, apenas adaptando para PHP
+- Layout responsivo (desktop e mobile)
+- Tema leve e rápido
+
+============================
+ESTRUTURA DO TEMA (OBRIGATÓRIA)
+============================
+Criar a seguinte estrutura de arquivos:
+
+/siteja-theme
+│── style.css
+│── functions.php
+│── header.php
+│── footer.php
+│── index.php
+│── front-page.php
+│── page.php
+│── single.php
+│── screenshot.png
+│── /assets
+│   ├── /css
+│   │   └── style.css
+│   ├── /js
+│   │   └── main.js
+│   ├── /images
+│   │   └── (todas as imagens do site atual)
+│   └── /videos
+│       └── (vídeo do hero, se houver)
+
+============================
+DETALHES DOS ARQUIVOS
+============================
+
+1) style.css (raiz do tema)
+- Conter o cabeçalho obrigatório do WordPress:
+  Theme Name: Site Já
+  Theme URI: https://siteja.website
+  Author: Site Já
+  Description: Tema oficial da agência Site Já
+  Version: 1.0
+- Importar o CSS principal da pasta /assets/css
+
+2) functions.php
+- Registrar menus (menu principal)
+- Enfileirar corretamente CSS e JS (wp_enqueue_style / wp_enqueue_script)
+- Suporte a:
+  - title-tag
+  - post-thumbnails
+- Não incluir plugins ou dependências externas
+
+3) header.php
+- Converter o <head> para wp_head()
+- Manter SEO básico
+- Header fixo com logo “Site Já”
+- Menu dinâmico do WordPress
+- Botão CTA “Ver Planos”
+
+4) footer.php
+- Converter scripts para wp_footer()
+- Rodapé centralizado
+- Incluir ícones com links:
+  Instagram: https://www.instagram.com/siteja.website?igsh=Y216Nml3YWhzZXR5
+  Facebook: https://www.facebook.com/profile.php?id=61585658536439
+- Botão flutuante de WhatsApp ativo em todas as páginas
+
+5) front-page.php
+- Conteúdo principal da landing page
+- Hero com vídeo de fundo
+- Todas as seções atuais exatamente como no site do Replit
+- Usar get_template_part quando necessário
+
+6) index.php / page.php / single.php
+- Estrutura básica WordPress para páginas e posts
+- Layout consistente com o tema
+
+7) screenshot.png
+- Thumbnail do tema (1200x900)
+- Visual escuro com verde neon
+- Logo “Site Já” centralizado
+
+============================
+COMPORTAMENTO
+============================
+- Não alterar textos, cores ou layout
+- Não simplificar o design
+- Garantir que o site carregue igual ao original
+- Garantir que o CSS e JS funcionem corretamente dentro do WordPress
+- Usar caminhos corretos com get_template_directory_uri()
+
+============================
+RESULTADO ESPERADO
+============================
+- Tema WordPress pronto para produção
+- Basta compactar a pasta do tema e subir no painel WordPress
+- Ao ativar o tema, o site deve ficar visualmente idêntico ao site criado no Replit
+
+============================
+ENTREGA
+============================
+- Gerar todos os arquivos completos com código final
+- Separar cada arquivo claramente
+- Não gerar código parcial ou exemplos
+- Não usar placeholders genéricos
