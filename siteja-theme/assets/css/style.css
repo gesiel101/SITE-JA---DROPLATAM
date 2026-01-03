@@ -1,0 +1,10 @@
+/* Static styles for non-Tailwind parts */
+.font-display { font-family: 'Space Grotesk', sans-serif; }
+.text-glow { text-shadow: 0 0 20px rgba(57, 255, 20, 0.5); }
+.neon-border { border: 1px solid rgba(57, 255, 20, 0.5); box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0d0d0d; }
+::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #39FF14; }
